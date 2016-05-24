@@ -1,53 +1,217 @@
-<!DOCTYPE html>
-<html data-require="math graphie graphie-helpers">
-<head>
+<html data-require="math graphie graphie-helpers"><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Absolute value</title>
-    <script src="../khan-exercise.js"></script>
-</head>
-<body>
-    <div class="exercise">
-    <div class="vars" data-ensure="SIGN === &quot;&quot; || INT !== 0 || FRAC !== &quot;&quot;">
-        <var id="INT">rand(5) > 0 ? randRange( 1, 9 ) : 0</var>
-        <var id="FRAC">rand(3) > 0 ? "." + randRange(1, 9) : ""</var>
+    <script src="../khan-exercise.js"></script><link rel="stylesheet" href="../css/khan-site.css"><link rel="stylesheet" href="../css/khan-exercise.css">
+<style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-family: serif; font-size: 85%; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {color: black; border: 1px solid; padding: 1px 3px; font-family: serif; font-size: 80%; vertical-align: ; text-align: left}
+.MathJax_Preview {color: #888888}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-family: serif; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap}
+.MathJax img {display: inline ! important}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax .MathJax_HitBox {cursor: text}
+#MathJax_Tooltip * {filter: none; background: transparent}
+#MathJax_getScales {font-family: MathJax_Main,MathJax_Size1,MathJax_AMS}
+.MathJax .math span {font-family: MathJax_Main,MathJax_Size1,MathJax_AMS}
+</style></head>
+<body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Exercise Template</title>
+    
+    
+        <div id="outer-wrapper">
+            <div id="page-container">
+                <div id="page-container-inner">
+                    <div id="fb-root"></div>
+                    
+                    <div id="container" class="single-exercise visited-no-recolor" style="overflow: hidden;">
+                        <article class="exercises-content clearfix">
+                        <div class="exercises-header"><h2 class="section-headline">
+                                <div class="topic-exercise-badge">&nbsp;</div>
+                                <span class="practice-exercise-topic-context">Practicing</span>
+                        Absolute value</h2></div>
+                        <div class="exercises-body">
+                            <div class="exercises-stack">&nbsp;</div>
+                            <div class="exercises-card current-card">
+                                <div class="current-card-container card-type-problem">
+                                    <div class="current-card-container-inner vertical-shadow">
+                                        <div class="current-card-contents"><!--
+    Note!
+    If you change this file, be sure to update it in both its locations:
+        o javascript/exercises-package/problem-template.handlebars
+        o khan-exercises/exercises/khan-exercise.html
+
+    (these two files should simply be copies of each other)
+
+    TODO(eater): Make this simpler
+-->
+
+<div id="exercise-message-container" style="display: none;">
+    <div class="exercise_message"></div>
+</div>
+<div id="warning-bar">
+    <span id="warning-bar-content"></span>
+    <span id="warning-bar-close">(<a href="">close</a>)</span>
+</div>
+<div id="problem-and-answer">
+    <div id="problemarea">
+        <div id="scratchpad" style="display: block;"><div><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="514" height="408" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><rect x="90" y="15" width="24" height="24" r="0" rx="0" ry="0" fill="#000000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="114" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#3f3f3f" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="138" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#7f7f7f" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="162" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#bfbfbf" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="186" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#ff0000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="210" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#ff7f00" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="234" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#ffff00" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="258" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#00ff00" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="282" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#00ffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="306" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#007fff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="330" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#0000ff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="354" y="7" width="24" height="24" r="0" rx="0" ry="0" fill="#7f00ff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="2" y="2" width="30" height="30" r="0" rx="5" ry="5" fill="#1e9dba" stroke="none" fill-opacity="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><path fill="#000000" stroke="none" d="M23.40670875726297,5.421248520434228L20.699708757262968,3.7192485204342276C20.01670875726297,3.2912485204342277,19.11670875726297,3.4972485204342276,18.68570875726297,4.180248520434228L17.61870875726297,5.879248520434228L22.797708757262967,9.131248520434227L23.86570875726297,7.434248520434227C24.294708757262967,6.750248520434226,24.08970875726297,5.849248520434227,23.40670875726297,5.421248520434227ZM8.40270875726297,20.552248520434226L13.58170875726297,23.805248520434226L22.02370875726297,10.367248520434226L16.84170875726297,7.113248520434226L8.402708757262971,20.552248520434226ZM7.611708757262969,24.685248520434225L7.496708757262969,27.740248520434225L10.20070875726297,26.310248520434225L12.71270875726297,24.984248520434225L7.71570875726297,21.844248520434224L7.61170875726297,24.685248520434225Z" transform="  " style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="#000000" stroke="none" d="M54.778,21.419L49.275999999999996,15.917000000000002L54.776999999999994,10.415000000000003L51.94899999999999,7.585000000000003L46.44699999999999,13.087000000000003L40.944999999999986,7.5850000000000035L38.11699999999998,10.415000000000003L43.61799999999998,15.917000000000002L38.11599999999998,21.419L40.94599999999998,24.248L46.446999999999974,18.746000000000002L51.94799999999997,24.248" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="#000000" stroke="none" d="M73.64895,12.429973726898853V10.850973726898852L65.17495,15.74397372689885L73.64895,20.63697372689885V18.94097372689885C75.94895,18.93997372689885,79.98495,19.13697372689885,79.98495,20.52997372689885C79.98495,22.47597372689885,75.76895,23.513973726898847,75.76895,23.513973726898847V25.005973726898848C75.76895,25.005973726898848,85.23995000000001,25.32997372689885,85.23995000000001,18.129973726898847C85.23995000000001,12.472973726898847,77.12895,12.260973726898847,73.64895000000001,12.429973726898847Z" transform="  " style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><rect x="2" y="2" width="30" height="30" r="0" rx="0" ry="0" fill="#000000" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0;" fill-opacity="0"></rect><rect x="32" y="2" width="30" height="30" r="0" rx="0" ry="0" fill="#000000" stroke="none" fill-opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0;"></rect><rect x="62" y="2" width="30" height="30" r="0" rx="0" ry="0" fill="#000000" stroke="none" fill-opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0;"></rect></svg></div></div>
+        <div id="workarea"><div><div class="vars" data-ensure="SIGN === &quot;&quot; || INT !== 0 || FRAC !== &quot;&quot;">
+        <var id="INT">rand(5) &gt; 0 ? randRange( 1, 9 ) : 0</var>
+        <var id="FRAC">rand(3) &gt; 0 ? "." + randRange(1, 9) : ""</var>
         <var id="SIGN">randFromArray(["", "-"])</var>
     </div>
-
-    <div class="problems">
-        <div>
             <div class="question">
-                <p>What is <code>\lvert <var>SIGN + INT + FRAC</var> \rvert</code>?</p>
+                <p>What is <code><span class="MathJax" role="textbox" aria-readonly="true"><nobr><span class="math" id="MathJax-Span-1"><span style="display: inline-block; position: relative; width: 1.873em; height: 0px; font-size: 122%;"><span style="position: absolute; top: -2.756em; left: 0em; clip: rect(1.83em 1000em 3.182em -0.408em);"><span class="mrow" id="MathJax-Span-2"><span class="mo" id="MathJax-Span-3" style="font-family: MathJax_Main;">∣</span><span class="mn" id="MathJax-Span-4" style="font-family: MathJax_Main;">6.2</span><span class="mo" id="MathJax-Span-5" style="font-family: MathJax_Main;">∣</span></span><span style="display: inline-block; width: 0px; height: 2.756em;"></span></span></span><span style="border-left-width: 0em; border-left-style: solid; display: inline-block; overflow: hidden; width: 0px; height: 1.22em; vertical-align: -0.305em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-1">\lvert 6.2 \rvert</script></code>?</p>
             </div>
-            <div class="solution"><var>INT + FRAC</var></div>
-        </div>
+            
+        </div></div>
+        <div id="hintsarea"></div>
     </div>
+    <div id="answer_area_wrap"><div id="answer_area">
+        <form id="answerform" name="answerform">
+            <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px">
+            <div id="answercontent" class="info-box">
+                <span id="examples-show" data-hasqtip="true">Acceptable formats</span>
+                <span class="info-box-header">Answer</span>
+                <div id="solutionarea" class="fancy-scrollbar"><input type="text"></div>
+                
+                <div class="answer-buttons">
+                <div class="check-answer-wrapper">
+                    <input type="button" class="simple-button green" id="check-answer-button" value="Check Answer" disabled="disabled" title="Type in an answer first.">
+                </div>
+                <input type="button" class="simple-button green" id="next-question-button" style="display:none;" name="correctnextbutton" value="Correct! Next Question...">
+                <div id="positive-reinforcement" style="display: none;"><img src="../images/face-smiley.png"></div>
+                <span id="show-solution-button-container"></span>
+                <div id="check-answer-results"><p class="check-answer-message info-box-sub-description"></p></div>
+                </div>
+            </div>
+            <div id="readonly" class="info-box">
+                <span id="readonly-problem" class="info-box-header"></span>
+                <span id="readonly-title" class="info-box-subheader">You are viewing a problem.</span>
+                <span class="info-box-sub-description">To work on problems like this, <a id="readonly-start" href="">start this exercise</a>.</span>
+            </div>
+            <div class="info-box hint-box">
+                <span class="info-box-header">Need help?</span>
+                <div id="get-hint-button-container">
+                    <input id="hint" type="button" class="simple-button orange full-width" value="I'd like a hint" name="hint">
+                </div>
+                <span id="hint-remainder"></span>
+            </div>
+            <div class="info-box related-video-box" style="display:none;">
+                <div id="related-video-content">
+                    <span class="info-box-header">Stuck? Watch a video.</span>
 
-    <div class="hints">
-        <div class="graphie">
-            init({
-                range: [ [-1, 11], [-1, 1] ]
-            });
-            var start = 0;
-            var end = 10;
-            var originX = 0;
-            var x = abs( INT ) + FRAC;
-            if ( SIGN === "-" ) {
-                start = -10;
-                end = 0;
-                originX = 10;
-                x = 10 - x;
-            }
-            numberLine( start, end );
-            style({ stroke: "#6495ED", fill: "#6495ED" });
-            graph.pt = circle( [ x, 0 ], 0.15 );
-            style({ stroke: "#FFA500", fill: "#FFA500", strokeWidth: 3.5, arrows: "->" });
-            path( [ [ originX, 0 ], [ x, 0 ] ] );
-            circle( [ originX, 0 ], 0.10 );
-            graph.pt.toFront();
+                    <div id="related-video-list">
+                        <span class="related-content-title">Related videos:</span>
+                        <ul class="related-video-list"></ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </form>
+        <div id="calculator" class="info-box" style="display: none;">
+            <span class="info-box-header">Calculator</span>
+            <div class="calculator">
+                <div class="history fancy-scrollbar">
+                    <div class="calc-row input"><input type="text"><div class="status"><a href="#" data-behavior="angle-mode"><br>DEG</a></div></div>
+                </div>
+                <div class="keypad">
+                    <div class="calc-row">
+                    <a href="#" data-text="asin(">sin<sup>-1</sup></a><a href="#" data-text="acos(">cos<sup>-1</sup></a><a href="#" data-text="atan(">tan<sup>-1</sup></a><a href="#" data-behavior="bs">del</a><a href="#" data-behavior="clear" class="dark">ac</a>
+                    </div>
+                    <div class="calc-row">
+                    <a href="#" data-text="sin(">sin</a><a href="#" data-text="cos(">cos</a><a href="#" data-text="tan(">tan</a><a href="#" data-text="sqrt(">√</a><a href="#" data-text="^">x<sup>y</sup></a>
+                    </div>
+                    <div class="calc-row">
+                    <a href="#" class="dark">7</a><a href="#" class="dark">8</a><a href="#" class="dark">9</a><a href="#">(</a><a href="#">)</a>
+                    </div>
+                    <div class="calc-row">
+                    <a href="#" class="dark">4</a><a href="#" class="dark">5</a><a href="#" class="dark">6</a><a href="#" data-text="*">×</a><a href="#" data-text="/">÷</a>
+                    </div>
+                    <div class="calc-row">
+                    <a href="#" class="dark">1</a><a href="#" class="dark">2</a><a href="#" class="dark">3</a><a href="#">+</a><a href="#" data-text="-">−</a>
+                    </div>
+                    <div class="calc-row">
+                    <a href="#" class="dark">0</a><a href="#" class="dark">.</a><a href="#" data-text="ans">ans</a><a href="#" data-behavior="evaluate" class="wide">=</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>The distance from <code>0</code> to <code><var>SIGN + INT + FRAC</var></code> is <code><var>INT + FRAC</var></code>, which equals the absolute value.</p>
-        <p data-if="SIGN !== &quot;&quot;">In other words, <code><var>INT + FRAC</var></code> is the non-negative version of <code><var>SIGN + INT + FRAC</var></code>.</p>
-    </div>
-    </div>
-</body>
-</html>
+        <div id="issue" class="info-box" style="display:none;">
+            <span class="info-box-header">Report a Problem</span>
+            <span id="issue-status" class="info-box-sub-description"></span>
+            <form>
+                <fieldset>
+                    <legend>Issue Type</legend>
+                    <ul>
+                        <li>
+                            <input type="radio" name="issue-type" id="issue-wrong-or-unclear">
+                            <label for="issue-wrong-or-unclear">Answer is wrong or question is unclear</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="issue-type" id="issue-hard">
+                            <label for="issue-hard">I'm frustrated (tell us why) or this is too hard</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="issue-type" id="issue-not-showing">
+                            <label for="issue-not-showing">I can't see the problem or website is stuck</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="issue-type" id="issue-other">
+                            <label for="issue-other">Other (please describe below)</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <label for="issue-title">Issue Title:<input type="text" name="issue-title" id="issue-title"></label>
+                <label for="issue-body">Description of Issue:<textarea name="issue-body" id="issue-body"></textarea></label>
+                <input type="submit" class="simple-button" value="Submit Issue">
+                <a href="/#" id="issue-cancel">Cancel</a>
+                <img id="issue-throbber" style="display:none;" name="issue-throbber" src="../css/images/throbber.gif">
+            </form>
+        </div>
+    </div></div>
+    <div style="clear: both;"></div>
+</div>
+</div>
+                                    </div>
+                                    <div id="extras" class="single-exercise">
+                                        <ul>
+                                            <li> <a id="scratchpad-show" href="" style="">Hide scratchpad</a>
+                                                <span id="scratchpad-not-available" style="display: none;">Scratchpad not available</span>
+                                            </li>
+                                            <li class="debug-mode"> <a href="?debug">Debug mode</a></li>
+                                            <li> <a id="problem-permalink" href="http://di445.github.io/khan-exercises/exercises/absolute_value.html?debug&amp;problem=0&amp;seed=68">Permalink: 0 #68</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </article>
+                    </div>
+                    
+                    <div id="badge-notification-container" class="badge-award-container" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="push"></div>
+        
+    
+
+
+<div id="MathJax_Message" style="display: none;"></div>
+    
+
+
+<div style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size4, sans-serif;"></div><i title="Raphaël Colour Picker" style="display: none; color: black;"></i></body></html>
